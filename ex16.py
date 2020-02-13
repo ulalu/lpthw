@@ -11,9 +11,6 @@ input("?")
 print("Opening the file...")
 target = open(filename, 'w')
 
-print("Truncating file. RIP.")
-target.truncate()
-
 print("Time to write a new file.")
 
 line1 = input("line 1: ")
@@ -22,12 +19,7 @@ line3 = input("line 3: ")
 
 print("Writing input to new file")
 
-target.write(line1)
-target.write("\n")
-target.write(line2)
-target.write("\n")
-target.write(line3)
-target.write("\n")
+target.write('%r\n%r\n%r\n' % (line1, line2, line3))
 
 print("Closing file")
 target.close()
