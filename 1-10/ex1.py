@@ -1,0 +1,1 @@
+print('I hate following instructions')
